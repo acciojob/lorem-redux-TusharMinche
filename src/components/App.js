@@ -18,14 +18,14 @@ const App = () => {
         Below Contains A title and Body gotten froma random API, Please take your time to Review
       </h4>
 
-      {loading && <h4>Loading...</h4>}
+      {loading && <h4>Title :Loading tiltes</h4>}
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}
 
       {!loading && !error && data && (
         <ul>
           <li>
             <strong className="title">Title :{data.title}</strong>
-            <p className="body">{data.body}</p>
+            <p className="body">Body :{data.body}</p>
           </li>
         </ul>
       )}
