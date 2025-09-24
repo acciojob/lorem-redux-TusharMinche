@@ -24,7 +24,8 @@ const App = () => {
       {!loading && !error && data && (
         <ul>
           <li>
-            <strong className="title">Title :{data.title}</strong> - {data.body}
+            <strong className="title">Title :{data.title}</strong>
+            <p className="body">{data.body}</p>
           </li>
         </ul>
       )}
