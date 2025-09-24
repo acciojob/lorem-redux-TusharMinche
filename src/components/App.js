@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <h1>A short Naration of Lorem Ipsum</h1>
       <h4>
-        Below contains a Title and Body gotten from a mock API, please take your time to review
+        Below Contains A title and Body gotten froma random API, Please take your time to Review
       </h4>
 
       {loading && <h4>Loading...</h4>}
@@ -24,7 +24,7 @@ const App = () => {
       {!loading && !error && data && (
         <ul>
           <li>
-            <strong className="title">{data.title}</strong> - {data.body}
+            <strong className="title">Title :{data.title}</strong> - {data.body}
           </li>
         </ul>
       )}

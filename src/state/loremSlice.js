@@ -9,7 +9,7 @@ export const fetchLorem = createAsyncThunk(
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({
-          title: "Lorem Ipsum",
+          title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
           body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus."
         });
       }, 1000); // 1s delay to show loading state
