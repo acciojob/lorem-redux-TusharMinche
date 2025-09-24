@@ -13,10 +13,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>A Short Noration of Lorem Ipsum</h1>
-      <p>
+      <h1>A short Naration of Lorem Ipsum</h1>
+      <h4>
         Below contains a Title and Body gotten from a mock API, please take your time to review
-      </p>
+      </h4>
 
       {loading && <h4>Loading...</h4>}
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}
@@ -24,7 +24,7 @@ const App = () => {
       {!loading && !error && data && (
         <ul>
           <li>
-            <strong>{data.title}</strong> - {data.body}
+            <strong className="title">{data.title}</strong> - {data.body}
           </li>
         </ul>
       )}
