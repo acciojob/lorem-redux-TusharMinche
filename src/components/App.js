@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './../styles/App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from "react";
-import { fetchLorem } from './../state/loremSlice'; // ✅ named import
+import { fetchLorem } from './../state/loremSlice';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -15,18 +14,22 @@ const App = () => {
   return (
     <div>
       <h1>A Short Noration of Lorem Ipsum</h1>
-      <p>Below contains a Title and Body gotten from a mock API, please take your time to review</p>
+      <p>
+        Below contains a Title and Body gotten from a mock API, please take your time to review
+      </p>
 
-      {loading && <p>Loading...</p>}
+      {loading && <h4>Loading...</h4>}
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+
       {!loading && !error && data && (
-        <div>
-          <h2>{data.title}</h2>
-          <p>{data.body}</p>
-        </div>
+        <ul>
+          <li>
+            <strong>{data.title}</strong> - {data.body}
+          </li>
+        </ul>
       )}
     </div>
   );
-}
+};
 
 export default App;
